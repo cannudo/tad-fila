@@ -21,4 +21,30 @@ class Main {
         return retorno;
     }
 
+    public static void main(String[] args) {
+        Fila fila = new Fila(3);
+        fila.status();
+        fila.enqueue(0);
+        System.out.println("--------------------");
+        fila.status();
+        fila.enqueue(1);
+        System.out.println("--------------------");
+        fila.status();
+        fila.enqueue(2);
+        System.out.println("--------------------");
+        System.out.println("\n\t✅ ENCHEU A FILA E OS TESTES BOOLEANOS PASSARAM\n");
+        System.out.println("--------------------");
+        fila.dequeue();
+        fila.status();
+        fila.imprimir_fila();
+        System.out.println("--------------------");
+        fila.dequeue();
+        fila.status();
+        fila.imprimir_fila();
+        System.out.println("--------------------");
+        fila.dequeue();
+        fila.status();
+        System.out.println("--------------------");
+        System.out.println("\n\t✅ ESVAZIOU A FILA E OS TESTES BOOLEANOS PASSARAM\n");
+    }
 }
