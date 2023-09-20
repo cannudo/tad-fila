@@ -1,4 +1,4 @@
-public class Fila {
+public class Fila implements FilaInterface {
     private int capacidade, index_queue, index_dequeue;
     private Object[] fila;
 
@@ -6,6 +6,21 @@ public class Fila {
         this.capacidade = capacidade;
         this.fila = new Object[capacidade];
         this.index_queue = index_dequeue = 0;
+    }
+
+    public int size() {
+        int retorno = 0;
+        if(this.index_queue >= this.index_dequeue) {
+            retorno = this.index_queue - this.index_dequeue;
+        } else {
+            retorno = this.capacidade - this.index_dequeue + this.index_queue;
+        }
+        return retorno;
+    }
+
+    public Object front() {
+        Object retorno = this.fila[this.index_dequeue];
+        return retorno;
     }
 
     public boolean isEmpty() {
@@ -39,6 +54,8 @@ public class Fila {
         System.out.println("Capacidade: " + this.capacidade);
         System.out.println("Index Queue: " + this.index_queue);
         System.out.println("Index Dequeue: " + this.index_dequeue);
+        System.out.println("Front: " + this.front());
+        System.out.println("Size: " + this.size());
         System.out.println("Vazia?: " + this.isEmpty());
     }
 }
