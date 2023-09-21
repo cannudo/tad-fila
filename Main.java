@@ -22,29 +22,42 @@ class Main {
     }
 
     public static void main(String[] args) {
-        Fila fila = new Fila(3);
-        fila.status();
-        fila.enqueue(0);
-        System.out.println("--------------------");
-        fila.status();
-        fila.enqueue(1);
-        System.out.println("--------------------");
-        fila.status();
-        fila.enqueue(2);
-        System.out.println("--------------------");
-        System.out.println("\n\t✅ ENCHEU A FILA E OS TESTES BOOLEANOS PASSARAM\n");
-        System.out.println("--------------------");
-        fila.dequeue();
-        fila.status();
+        Fila fila = new Fila(4);
         fila.imprimir_fila();
-        System.out.println("--------------------");
-        fila.dequeue();
-        fila.status();
+        System.out.println();
+        fila.enqueue(5);
         fila.imprimir_fila();
-        System.out.println("--------------------");
+        System.out.println();
+        fila.enqueue(3);
+        fila.imprimir_fila();
+        System.out.println();
         fila.dequeue();
-        fila.status();
-        System.out.println("--------------------");
-        System.out.println("\n\t✅ ESVAZIOU A FILA E OS TESTES BOOLEANOS PASSARAM\n");
+        fila.imprimir_fila();
+        System.out.println();
+        fila.enqueue(7);
+        fila.imprimir_fila();
+        System.out.println();
+        fila.dequeue();
+        fila.imprimir_fila();
+        System.out.println();
+        fila.dequeue();
+        fila.imprimir_fila();
+        System.out.println();
+        System.out.println("Vazia? " + fila.isEmpty());
+        fila.imprimir_fila();
+        System.out.println();
+        fila.enqueue(9);
+        fila.imprimir_fila();
+        System.out.println();
+        fila.enqueue(7);
+        fila.imprimir_fila();
+        System.out.println();
+        System.out.println(fila.size());
+        fila.enqueue(3);
+        fila.imprimir_fila();
+        System.out.println();
+        fila.dequeue();
+        fila.imprimir_fila();
+        System.out.println();
     }
 }
